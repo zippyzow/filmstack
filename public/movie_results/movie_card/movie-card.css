@@ -1,0 +1,12 @@
+pw-movie-card .card {
+  height: 100%;
+  margin: 0;
+}
+
+pw-movie-card .poster-container {
+  width: 30%;
+}
+
+pw-movie-card .poster {
+  vertical-align: middle;
+}

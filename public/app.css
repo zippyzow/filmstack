@@ -1,0 +1,17 @@
+pw-app .selectors-container {
+  height: 200px;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+pw-app .selectors-container > * {
+  padding: 24px;
+}
+
+pw-app .spinner {
+  margin: auto;
+}
+
+pw-app md-grid-tile figure > * {
+  width: 100%;
+}
+

@@ -1,0 +1,7 @@
+<md-grid-list class="movie-results" md-cols="3"
+              md-row-height="240px"
+              md-gutter="20px">
+  <md-grid-tile ng-cloak ng-repeat="movie in movies | orderBy: 'title'">
+    <pw-movie-card class="movie-card" movie="movie"></pw-movie-card>
+  </md-grid-tile>
+</md-grid-list>

@@ -1,0 +1,18 @@
+<md-card class="card">
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">{{ movie.title }}</span>
+      <span class="md-subhead">{{ movie.year }} {{ movie.genre }} {{ movie.runtime }}</span>
+      <div>
+        <span class="md-caption"><b>Director:</b> {{ movie.director }}</span>
+        <br>
+        <span class="md-caption"><b>Actors:</b> {{ movie.cast }}</span>
+        <br>
+        <span class="md-caption"><b>Plot:</b> {{ movie.plot }}</span>
+      </div>
+    </md-card-title-text>
+      <div class="poster-container card-media">
+        <img class="poster" ng-src="{{ movie.poster }}"/>
+      </div>
+  </md-card-title>
+</md-card>
