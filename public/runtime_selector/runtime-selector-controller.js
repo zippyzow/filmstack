@@ -15,7 +15,7 @@ peeweeModule.controller('runtimeSelectorCtrl', function($scope) {
       value: [0, 180]
     },
     {
-      label: "Any",
+      label: "No Limit",
       value: [0, Number.MAX_VALUE]
     }
   ]

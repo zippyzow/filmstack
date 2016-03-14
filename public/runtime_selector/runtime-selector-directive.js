@@ -3,8 +3,5 @@ peeweeModule.directive('pwRuntimeSelector', function() {
     restrict: 'E',
     templateUrl: '/runtime_selector/runtime-selector.html',
     controller: 'runtimeSelectorCtrl',
-    scope: {
-      selectedRuntime: '='
-    }
   }
 });

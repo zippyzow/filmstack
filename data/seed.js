@@ -1,5 +1,8 @@
 /**
  * Created by haileykeen on 3/10/16.
+ *
+ * must give node more memory when running this script
+ * $ node --max-old-space-size=8192 seed.js
  */
 var mongoose = require('mongoose');
 var fs = require('fs');
@@ -38,7 +41,7 @@ rl.on('line', function(line) {
     headers = line.split('\t');
   } else {
     if (counter % 1000 === 0) {
-      console.log('HEY WE MADE IT', counter);
+      console.log('Status: ' + numMoviesAdded + ' out of ' + counter + ' added');
     }
 
     var movieObj = {};
@@ -48,6 +51,7 @@ rl.on('line', function(line) {
     }
 
     correctMovieData(movieObj);
+
     if (isValid(movieObj)) {
       moviesCollection.insert(movieObj);
       numMoviesAdded++;
@@ -64,6 +68,7 @@ rl.on('line', function(line) {
 });
 
 var rejectedGenres = ['Adult', 'Game-Show', 'News', 'Reality-TV', 'Talk-Show'];
+var mustHaveTheseFields = ['title', 'year', 'runtime', 'director', 'cast', 'plot', 'poster'];
 function isValid(movieObj) {
   var genres = movieObj.genre;
   for (var i = 0; i < genres.length; i++) {
@@ -71,8 +76,14 @@ function isValid(movieObj) {
       return false;
     }
   }
+  for (var j = 0; j < mustHaveTheseFields.length; j++) {
+    var value = movieObj[mustHaveTheseFields[j]];
+    if (value === null || value === undefined || value === '') {
+      return false;
+    }
+  }
   return true;
-}
+};
 
 function correctMovieData(movie) {
   for (var key in movie) {
@@ -80,13 +91,25 @@ function correctMovieData(movie) {
     delete movie[key];
   }
   movie.year = parseInt(movie.year);
-  movie.runtime = parseInt(movie.runtime);
+  movie.runtime = correctRuntime(movie.runtime);
   movie.genre = movie.genre ? movie.genre.split(', ') : [];
-}
+};
 
+function correctRuntime(oldRuntime) {
+  if (oldRuntime) {
+    oldRuntime = oldRuntime.replace(',', '');
+    var split = oldRuntime.split('h');
+    if (split.length === 1) {
+      return parseInt(oldRuntime);
+    } else {
+      var newRuntime = parseInt(split[0]) * 60;
+      if (split[1] !== '') {
+        newRuntime += parseInt(split[1]);
+      }
+      return newRuntime;
+    }
+  }
+};
 
-// 4 h
-// 1 h 5 min
-// 1,875 min
 
 

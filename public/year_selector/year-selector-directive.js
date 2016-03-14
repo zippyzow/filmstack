@@ -3,8 +3,5 @@ peeweeModule.directive('pwYearSelector', function() {
     restrict: 'E',
     templateUrl: '/year_selector/year-selector.html',
     controller: 'yearSelectorCtrl',
-    scope: {
-      selectedDecade: '='
-    }
   }
 });

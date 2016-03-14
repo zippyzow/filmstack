@@ -1,8 +1,13 @@
-<div class="selectors-container" layout="row">
-  <pw-year-selector ng-cloak class="year-selector" flex selected-decade="selectedDecade"></pw-year-selector>
-  <pw-genre-selector ng-cloak flex selected-genres="selectedGenres"></pw-genre-selector>
-  <pw-runtime-selector ng-cloak flex selected-runtime="selectedRuntime"></pw-runtime-selector>
-</div>
-<md-progress-circular class="spinner" md-diameter="200" ng-show="isLoading"></md-progress-circular>
-<pw-movie-results flex movies="movies"></pw-movie-results>
+<pw-start-selector ng-show="!isMovieResults">
+</pw-start-selector>
+
+<section ng-show="isMovieResults">
+  <div class="selectors-container" layout="row">
+    <pw-year-selector ng-cloak class="year-selector" flex></pw-year-selector>
+    <pw-genre-selector ng-cloak flex></pw-genre-selector>
+    <pw-runtime-selector ng-cloak flex></pw-runtime-selector>
+  </div>
+  <md-progress-circular class="spinner" md-diameter="200" ng-show="isLoading"></md-progress-circular>
+  <pw-movie-results ng-show="!isLoading" flex></pw-movie-results>
+</section>
 

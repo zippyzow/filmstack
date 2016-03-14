@@ -17,7 +17,7 @@ var movieSchema = new mongoose.Schema({});
  * @param cb
  */
 movieSchema.statics.list = function(year, runtime, genres, cb) {
-  var query = this.find({}).limit(100);
+  var query = this.find({}).limit(200);
 
   if (year) {
     if (typeof year === 'number') {
