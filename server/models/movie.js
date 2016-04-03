@@ -2,7 +2,9 @@
  * Created by haileykeen on 2/1/16.
  */
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/peewee');
+//mongoose.connect('mongodb://localhost/peewee');
+console.log(process.env);
+mongoose.connect(process.env.MONGO_URL);
 mongoose.connection.on('error', console.error.bind(console, 'MongoDb connection error: '));
 
 var movieSchema = new mongoose.Schema({});
