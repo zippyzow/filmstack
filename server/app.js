@@ -20,7 +20,7 @@ app.use(morgan('dev'));
 
 app.use('/', routes);
 
-app.listen(3000, function(req, res) {
+app.listen(process.env.PORT || 3000, function(req, res) {
   console.log('Server listening at http://localhost:3000');
 });
 
