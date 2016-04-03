@@ -20,7 +20,7 @@ Thumbs.db
 #scss
 .sass-cache/
 *.css.map
-public/stylesheets/*.css
+
 
 #npm
 node_modules/
