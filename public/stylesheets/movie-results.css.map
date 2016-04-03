@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,+BAAgC;EAC9B,MAAM,EAAE,IAAI;;AAGd,4BAA6B;EAC3B,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;;AAGb,oCAAqC;EACnC,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,IAAI",
+"sources": ["../sass/movie-results.scss"],
+"names": [],
+"file": "movie-results.css"
+}

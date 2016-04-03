@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAkB;EAChB,SAAS,EAAE,eAAe",
+"sources": ["../sass/genre-selector.scss"],
+"names": [],
+"file": "genre-selector.css"
+}
