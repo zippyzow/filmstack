@@ -1,0 +1,25 @@
+body {
+  background: url(../images/old-cinema.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+}
+
+pw-app .selectors-container {
+  height: 260px;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+pw-app .selectors-container > * {
+  padding: 24px;
+}
+
+pw-app .spinner {
+  margin: auto;
+}
+
+pw-app md-grid-tile figure > * {
+  width: 100%;
+}

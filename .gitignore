@@ -16,11 +16,18 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-node_modules/
+
+#scss
 .sass-cache/
+*.css.map
 public/stylesheets/*.css
+
+#npm
+node_modules/
+
+
 public/min/
-public/index.html
+
 vendor/*
 public/fonts
 
