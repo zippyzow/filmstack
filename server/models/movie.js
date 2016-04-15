@@ -4,7 +4,7 @@
 var mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost/peewee');
 console.log(process.env);
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect("mongodb://admin:admin@ds023108.mlab.com:23108/filmstack");
 mongoose.connection.on('error', console.error.bind(console, 'MongoDb connection error: '));
 
 var movieSchema = new mongoose.Schema({});
