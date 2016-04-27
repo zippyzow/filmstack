@@ -3,6 +3,7 @@
  */
 var express = require('express');
 var router = express.Router();
+var http = require('http');
 
 var Movie = require('../models/movie');
 
@@ -41,6 +42,13 @@ router.get('/query', function(req, res) {
       res.send(movies);
     }
   });
+});
+
+router.get('/imageproxy/:url', function(req, res) {
+  // res.send(req.params.url);
+  http.get(decodeURI(req.params.url), function(httpRes) {
+    httpRes.pipe(res);
+  })
 });
 
 module.exports = router;

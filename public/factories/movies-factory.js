@@ -15,13 +15,13 @@ peeweeModule.factory('moviesFactory', function($http) {
       }
 
       return $http.get('/query', {params: queryParams}).then(function(response) {
-        // return response.data;
+        return response.data;
 
         // strip the http from the poster urls for all movies.
-        return response.data.map(function(movie) {
-          movie.poster = movie.poster.replace('http:', 'https:');
-          return movie;
-        });
+        // return response.data.map(function(movie) {
+        //   movie.poster = movie.poster.replace('http:', 'https:');
+        //   return movie;
+        // });
       });
     }
   }
