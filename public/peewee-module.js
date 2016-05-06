@@ -12,7 +12,7 @@ var peeweeModule = angular.module('pwApp', [
               'default': '900'
             })
             .accentPalette('indigo', {
-                'default': '900'
+              'default': '900'
             });
     });
 

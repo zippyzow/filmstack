@@ -1,5 +1,6 @@
 body {
-  background: url(../images/old-cinema.jpg) no-repeat center center fixed;
+  //background: url(../images/old-cinema.jpg) no-repeat center center fixed;
+  background-color: #212121;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7,19 +8,48 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-pw-app .selectors-container {
-  height: 260px;
-  border-bottom: 1px solid #d0d0d0;
-}
+//pw-app .selectors-container {
+//  height: 260px;
+//  border-bottom: 1px solid #d0d0d0;
+//}
+//
+//pw-app .selectors-container > * {
+//  padding: 24px;
+//}
+//
+//pw-app .spinner {
+//  margin: auto;
+//}
+//
+//pw-app md-grid-tile figure > * {
+//  width: 100%;
+//}
 
-pw-app .selectors-container > * {
-  padding: 24px;
-}
-
-pw-app .spinner {
-  margin: auto;
-}
-
-pw-app md-grid-tile figure > * {
+pw-app .preferences {
+  font-family: 'Playfair Display', serif;
+  color: #FFFFFF;
+  font-size: 0;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
   width: 100%;
+}
+
+
+
+pw-app .preferences * {
+  font-size: 50px;
+}
+
+.button-style {
+  font-family: 'Playfair Display', serif;
+  text-transform: lowercase;
+  font-size: inherit;
+  font-weight: 700;
+  margin: 0px;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed white;
 }

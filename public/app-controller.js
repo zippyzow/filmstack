@@ -1,6 +1,30 @@
-peeweeModule.controller('appCtrl', function($scope, $document, $timeout, moviesFactory) {
+peeweeModule.controller('appCtrl', function($scope, $document, $timeout, $mdDialog, moviesFactory) {
   $scope.isLoading = false;
   $scope.isMovieResults = false;
+
+  $scope.showGenres = function($event) {
+    // $mdDialog.show(
+    //     $mdDialog.alert()
+    //         .clickOutsideToClose(true)
+    //         .title('Opening from offscreen')
+    //         .textContent('Closing to offscreen')
+    //         .ariaLabel('Offscreen Demo')
+    //         .ok('Amazing!')
+    //         .openFrom('.genre-button')
+    //         .closeTo('.genre-button')
+    // );
+    $mdDialog.show({
+      targetEvent: $event,
+      clickOutsideToClose: true,
+      templateUrl: '/genre_selector/genre-selector-dialog.html',
+      controller: 'genreSelectorDialogCtrl',
+      fullscreen: true
+    });
+  };
+
+  $scope.closeDialog = function() {
+    alert('hi');
+  };
 
   $scope.$on('goToMovieResults', function() {
     angular.element($document[0].body).css('background', 'white');
@@ -38,3 +62,4 @@ peeweeModule.controller('appCtrl', function($scope, $document, $timeout, moviesF
     }
   }
 });
+
