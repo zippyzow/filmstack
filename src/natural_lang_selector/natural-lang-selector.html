@@ -3,9 +3,10 @@
 
   <!--GENRES-->
   <md-select placeholder="any movie"
+             multiple="true"
              class="selector md-no-underline"
-             md-container-class="selector-option-style"
-             ng-model="user"
+             md-container-class="selector-option"
+             ng-model="lol1"
              md-on-open="loadUsers()"
              style="min-width: 50px">
     <md-optgroup label="Choose genres">
@@ -18,11 +19,10 @@
   <br>
 
   <!--DECADE-->
-  <md-select placeholder="any decade"
+  <md-select 
              class="selector md-no-underline"
-             md-container-class="selector-option-style"
-             ng-model="user" 
-             md-on-open="loadUsers()" 
+             md-container-class="selector-option"
+             ng-model="selectedDecade" 
              style="min-width: 50px">
     <md-option class="selector-option" ng-value="decade" ng-repeat="decade in decades">{{decade.label}}</md-option>
   </md-select>
@@ -32,9 +32,8 @@
   <!--RUNTIME-->
   <md-select placeholder="any runtime"
              class="selector md-no-underline"
-             md-container-class="selector-option-style"
-             ng-model="user"
-             md-on-open="loadUsers()"
+             md-container-class="selector-option"
+             ng-model="selectedRuntime"
              style="min-width: 50px;">
     <md-option class="selector-option" ng-value="runtime" ng-repeat="runtime in runtimes">{{runtime.label}}</md-option>
   </md-select>

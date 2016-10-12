@@ -12,6 +12,7 @@ var execSync = require('child_process').execSync;
 var inputPath = "../../../omdbMovies.txt";
 
 //count the lines in the file using bash
+//TODO: figure out better method to to know when stream reader is finished
 var numLines = parseInt(execSync('wc -l ' + inputPath).toString());
 console.log(numLines);
 

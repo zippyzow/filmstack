@@ -7,7 +7,6 @@
 pw-genre-selector {
   font-size: 14px !important; }
 
-
 pw-movie-results .movie-results {
   margin: 20px; }
 
@@ -20,36 +19,33 @@ pw-movie-results .no-results-message {
   margin-top: 50px; }
 
 body {
-  font-family: 'Raleway', sans-serif;
-  background-color: #212121;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  background-color: #212121; }
+
+natural-lang-selector {
+  display: block; }
+
+pw-movie-results {
+  display: block; }
 
 .selectors-container {
-  font-family: 'Raleway', sans-serif;
-  color: #FFFFFF;
+  color: #b8b8b8;
+  font: 100% "Raleway", sans-serif;
   font-size: 50px;
-  font-weight: 700;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  text-align: center;
-  width: 100%; }
+  font-weight: 400;
+  text-align: center; }
 
 .selector {
-  font-family: 'Raleway', sans-serif;
+  font: 100% "Raleway", sans-serif;
   display: inline-block;
-  color: #FFFFFF;
   text-transform: lowercase;
-  font-size: inherit;
-  font-weight: 700;
   border-bottom: 2px dashed white; }
 
 .selector-option {
-  font-family: 'Raleway', sans-serif; }
+  font: 100% "Raleway", sans-serif; }
+
+.md-select-value {
+  color: #ffffff !important;
+  font-weight: 400; }
 
 pw-start-selector md-content {
   width: 460px;
