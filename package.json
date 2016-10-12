@@ -19,6 +19,9 @@
   "homepage": "https://github.com/zippyzow/project-peewee#readme",
   "dependencies": {
     "angular": "^1.5.3",
+    "angular-animate": "^1.5.7",
+    "angular-aria": "^1.5.7",
+    "angular-material": "^1.0.9",
     "body-parser": "^1.14.2",
     "express": "^4.13.4",
     "mongoose": "^4.3.7",
@@ -31,10 +34,13 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-jshint": "^2.0.0",
-    "gulp-sass": "^2.3.1",
-    "gulp-util": "^3.0.7",
-    "jshint": "^2.9.2",
-    "jshint-stylish": "^2.1.0"
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "jshint-stylish": "^2.2.0"
   }
 }

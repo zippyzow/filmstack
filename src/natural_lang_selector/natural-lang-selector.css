@@ -1,0 +1,33 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #212121;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.selectors-container {
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFFF;
+  font-size: 50px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  width: 100%; }
+
+.selector {
+  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+  color: #FFFFFF;
+  text-transform: lowercase;
+  font-size: inherit;
+  font-weight: 700;
+  border-bottom: 2px dashed white; }
+
+.selector-option {
+  font-family: 'Raleway', sans-serif; }
+
+/*# sourceMappingURL=natural-lang-selector.css.map */

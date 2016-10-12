@@ -1,0 +1,41 @@
+@mixin font {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  @include font;
+  background-color: #212121;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.selectors-container {
+  @include font;
+  color: #FFFFFF;
+  font-size: 50px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.selector {
+  @include font;
+  display: inline-block;
+  color: #FFFFFF;
+  text-transform: lowercase;
+  font-size: inherit;
+  font-weight: 700;
+  //margin: 0;
+  border-bottom: 2px dashed white;
+}
+
+.selector-option {
+  @include font;
+}
+

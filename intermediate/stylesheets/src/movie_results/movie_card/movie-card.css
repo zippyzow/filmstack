@@ -1,0 +1,26 @@
+pw-movie-card .card {
+  height: 100%;
+  margin: 0; }
+
+pw-movie-card md-card-title-text {
+  padding-right: 8px; }
+
+pw-movie-card .movie-title {
+  font-family: 'Rye', cursive; }
+
+pw-movie-card .poster-container {
+  width: 30%; }
+
+pw-movie-card .poster {
+  vertical-align: middle; }
+
+pw-movie-card .genre-chips md-chip {
+  height: 16px !important;
+  line-height: 16px !important;
+  font-size: 12px;
+  margin: 0 4px 0 0 !important; }
+
+pw-movie-card .genre-chips md-chips-wrap {
+  padding: 0 !important;
+  box-shadow: none !important;
+  margin: 3px 0; }
