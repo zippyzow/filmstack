@@ -51,15 +51,13 @@ peeweeModule.controller('appCtrl', function($scope, $document, $timeout, $mdDial
   });
 
   $scope.updateMovies = function() {
-
-    if ($scope.isMovieResults) {
+    console.log('updateMovies');
       $scope.movies = [];
       $scope.isLoading = true;
-      moviesFactory.getMovies($scope.selectedDecade, $scope.selectedGenres, $scope.selectedRuntime).then(function (movies) {
+      moviesFactory.getMovies($scope.selectedDecade.value, $scope.selectedGenres, $scope.selectedRuntime.value).then(function(movies) {
         $scope.isLoading = false;
         $scope.movies = movies;
       });
-    }
   }
 });
 

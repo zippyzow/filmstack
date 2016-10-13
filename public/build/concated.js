@@ -69279,6 +69279,7 @@ var peeweeModule = angular.module('pwApp', ['ngMaterial', 'templates'])
 peeweeModule.factory('moviesFactory', function($http) {
   return {
     getMovies: function(year, genres, runtime) {
+      console.log('getMovies');
 
       var queryParams = {};
 
@@ -69357,15 +69358,13 @@ peeweeModule.controller('appCtrl', function($scope, $document, $timeout, $mdDial
   });
 
   $scope.updateMovies = function() {
-
-    if ($scope.isMovieResults) {
+    console.log('updateMovies');
       $scope.movies = [];
       $scope.isLoading = true;
-      moviesFactory.getMovies($scope.selectedDecade, $scope.selectedGenres, $scope.selectedRuntime).then(function (movies) {
+      moviesFactory.getMovies($scope.selectedDecade.value, $scope.selectedGenres, $scope.selectedRuntime.value).then(function(movies) {
         $scope.isLoading = false;
         $scope.movies = movies;
       });
-    }
   }
 });
 
@@ -69390,108 +69389,46 @@ peeweeModule.directive('pwMovieResults', function() {
 peeweeModule.controller('naturalLangCtrl', function($scope) {
 
   $scope.genres = [
-    {
-      label: 'Action',
-      selected: false
-    },
-    {
-      label: 'Adventure',
-      selected: false
-    },
-    {
-      label: 'Animation',
-      selected: false
-    },
-    {
-      label: 'Comedy',
-      selected: false
-    },
-    {
-      label: 'Biography',
-      selected: false
-    },
-    {
-      label: 'Crime',
-      selected: false
-    },
-    {
-      label: 'Documentary',
-      selected: false
-    },
-    {
-      label: 'Drama',
-      selected: false
-    },
-    {
-      label: 'Family',
-      selected: false
-    },
-    {
-      label: 'Fantasy',
-      selected: false
-    },
-    {
-      label: 'Film-Noir',
-      selected: false
-    },
-    {
-      label: 'History',
-      selected: false
-    },
-    {
-      label: 'Horror',
-      selected: false
-    },
-    {
-      label: 'Music',
-      selected: false
-    },
-    {
-      label: 'Musical',
-      selected: false
-    },
-    {
-      label: 'Mystery',
-      selected: false
-    },
-    {
-      label: 'Romance',
-      selected: false
-    },
-    {
-      label: 'Sci-Fi',
-      selected: false
-    },
-    {
-      label: 'Short',
-      selected: false
-    },
-    {
-      label: 'Sport',
-      selected: false
-    },
-    {
-      label: 'Thriller',
-      selected: false
-    },
-    {
-      label: 'Western',
-      selected: false
-    },
-    {
-      label: 'War',
-      selected: false
-    }
+    "Action",
+    "Adventure",
+    "Animation",
+    "Comedy",
+    "Biography",
+    "Crime",
+    "Documentary",
+    "Drama",
+    "Family",
+    "Fantasy",
+    "Film-Noir",
+    "History",
+    "Horror",
+    "Music",
+    "Musical",
+    "Mystery",
+    "Romance",
+    "Sci-Fi",
+    "Short",
+    "Sport",
+    "Thriller",
+    "Western",
+    "War"
   ];
 
-  $scope.updateSelectedGenres = function() {
-    $scope.selectedGenres = $scope.genres
-        .filter(function(genre) {
-          return genre.selected;
-        })
-        .map(function(genre) {
-          return genre.label;
-        });
+  $scope.selectedGenres = [];
+
+  $scope.printSelectedGenres = function() {
+    if ($scope.selectedGenres.length === 0) {
+      return 'any genre of';
+    } else if ($scope.selectedGenres.length === 1) {
+      return $scope.selectedGenres[0];
+    } else if ($scope.selectedGenres.length === 2) {
+      return $scope.selectedGenres.join(' and ');
+    } else if ($scope.selectedGenres.length === 3) {
+      return $scope.selectedGenres[0] +', ' + $scope.selectedGenres[1] + ', and ' + $scope.selectedGenres[2];
+    } else {
+      return $scope.selectedGenres[0] +', ' + $scope.selectedGenres[1] + ', and ' +
+          ($scope.selectedGenres.length - 2) + ' more genres';
+    }
   };
 
   $scope.decades = [
@@ -69548,13 +69485,12 @@ peeweeModule.controller('naturalLangCtrl', function($scope) {
       value: [2010, 2019]
     }
   ];
-
   $scope.selectedDecade = $scope.decades[0];
 
   $scope.runtimes = [
     {
       label: "any duration",
-      value: [0, Number.MAX_VALUE]
+      value: [0, 999999]
     },
     {
       label: "up to 1 hour long",
@@ -69569,9 +69505,7 @@ peeweeModule.controller('naturalLangCtrl', function($scope) {
       value: [0, 180]
     }
   ];
-
   $scope.selectedRuntime = $scope.runtimes[0];
-
 });
 peeweeModule.directive('naturalLangSelector', function() {
   return {
@@ -69589,7 +69523,7 @@ peeweeModule.controller('movieCardCtrl', function($scope) {
 peeweeModule.directive('pwMovieCard', function() {
   return {
     restrict: 'E',
-    templateUrl: '/movie_results/movie_card/movie-card.html',
+    templateUrl: 'movie_results/movie_card/movie-card.html',
     controller: 'movieCardCtrl',
     scope: {
       movie: '='

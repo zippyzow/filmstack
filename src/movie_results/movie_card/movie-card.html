@@ -15,8 +15,10 @@
         <span class="md-caption"><b>Plot:</b> {{ movie.plot | limitTo: 100 }}{{movie.plot.length > 100   ? '...' : '' }}</span>
       </div>
     </md-card-title-text>
-      <div class="poster-container card-media">
+    <md-card-title-media class="img-container">
+      <div class="md-media-md card-media">
         <img class="poster" ng-src="{{ getProxyUrl(movie.poster) }}"/>
       </div>
+    </md-card-title-media>
   </md-card-title>
 </md-card>

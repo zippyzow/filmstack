@@ -7,41 +7,44 @@
 pw-genre-selector {
   font-size: 14px !important; }
 
-pw-movie-results .movie-results {
-  margin: 20px; }
-
-pw-movie-results .movie-card {
-  height: 100%;
-  width: 100%; }
-
-pw-movie-results .no-results-message {
-  text-align: center;
-  margin-top: 50px; }
-
 body {
   background-color: #212121; }
 
 natural-lang-selector {
-  display: block; }
+  display: block;
+  background-color: #212121; }
 
 pw-movie-results {
-  display: block; }
+  display: block;
+  background-color: #212121; }
+
+.movie-results {
+  background-color: #212121;
+  margin: 20px; }
+
+.movie-card {
+  height: 100%;
+  width: 100%; }
+
+.no-results-message {
+  text-align: center;
+  margin-top: 50px; }
 
 .selectors-container {
   color: #b8b8b8;
-  font: 100% "Raleway", sans-serif;
-  font-size: 50px;
+  font: 100% "Roboto", sans-serif;
+  font-size: 26px;
   font-weight: 400;
   text-align: center; }
 
 .selector {
-  font: 100% "Raleway", sans-serif;
+  font: 100% "Roboto", sans-serif;
   display: inline-block;
   text-transform: lowercase;
   border-bottom: 2px dashed white; }
 
 .selector-option {
-  font: 100% "Raleway", sans-serif; }
+  font: 100% "Roboto", sans-serif; }
 
 .md-select-value {
   color: #ffffff !important;
@@ -77,29 +80,27 @@ pw-start-selector md-tabs {
   height: 360px; }
 
 
-pw-movie-card .card {
+.card {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font: 100% "Roboto", sans-serif; }
 
-pw-movie-card md-card-title-text {
-  padding-right: 8px; }
+.movie-title {
+  font-size: 20px; }
 
-pw-movie-card .movie-title {
-  font-family: 'Rye', cursive; }
+.img-container {
+  padding: 10px 10px; }
 
-pw-movie-card .poster-container {
-  width: 30%; }
-
-pw-movie-card .poster {
+.poster {
   vertical-align: middle; }
 
-pw-movie-card .genre-chips md-chip {
+.genre-chips md-chip {
   height: 16px !important;
   line-height: 16px !important;
   font-size: 12px;
   margin: 0 4px 0 0 !important; }
 
-pw-movie-card .genre-chips md-chips-wrap {
+.genre-chips md-chips-wrap {
   padding: 0 !important;
   box-shadow: none !important;
   margin: 3px 0; }

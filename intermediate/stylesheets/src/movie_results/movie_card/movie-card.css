@@ -1,26 +1,24 @@
-pw-movie-card .card {
+.card {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font: 100% "Roboto", sans-serif; }
 
-pw-movie-card md-card-title-text {
-  padding-right: 8px; }
+.movie-title {
+  font-size: 20px; }
 
-pw-movie-card .movie-title {
-  font-family: 'Rye', cursive; }
+.img-container {
+  padding: 10px 10px; }
 
-pw-movie-card .poster-container {
-  width: 30%; }
-
-pw-movie-card .poster {
+.poster {
   vertical-align: middle; }
 
-pw-movie-card .genre-chips md-chip {
+.genre-chips md-chip {
   height: 16px !important;
   line-height: 16px !important;
   font-size: 12px;
   margin: 0 4px 0 0 !important; }
 
-pw-movie-card .genre-chips md-chips-wrap {
+.genre-chips md-chips-wrap {
   padding: 0 !important;
   box-shadow: none !important;
   margin: 3px 0; }

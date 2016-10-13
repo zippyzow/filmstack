@@ -1,6 +1,7 @@
 peeweeModule.factory('moviesFactory', function($http) {
   return {
     getMovies: function(year, genres, runtime) {
+      console.log('getMovies');
 
       var queryParams = {};
 

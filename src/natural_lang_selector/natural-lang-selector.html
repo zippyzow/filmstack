@@ -1,54 +1,37 @@
 <div class="selectors-container">
-  <span>I want to watch </span>
+  <span>Show me </span>
 
   <!--GENRES-->
-  <md-select placeholder="any movie"
+  <md-select md-selected-text="printSelectedGenres()"
              multiple="true"
              class="selector md-no-underline"
              md-container-class="selector-option"
-             ng-model="lol1"
-             md-on-open="loadUsers()"
-             style="min-width: 50px">
+             ng-model="selectedGenres"
+             md-on-open="loadUsers()">
     <md-optgroup label="Choose genres">
       <md-option ng-value="genre" ng-repeat="genre in genres |
-              filter:searchTerm">{{genre.label}}</md-option>
+              filter:searchTerm">{{genre}}</md-option>
     </md-optgroup>
   </md-select>
+  <span> movies </span>
 
   <span> from </span>
-  <br>
 
   <!--DECADE-->
   <md-select 
              class="selector md-no-underline"
              md-container-class="selector-option"
-             ng-model="selectedDecade" 
-             style="min-width: 50px">
+             ng-model="selectedDecade">
     <md-option class="selector-option" ng-value="decade" ng-repeat="decade in decades">{{decade.label}}</md-option>
   </md-select>
   
-  <span>that is </span>
+  <span>that are</span>
 
   <!--RUNTIME-->
   <md-select placeholder="any runtime"
              class="selector md-no-underline"
              md-container-class="selector-option"
-             ng-model="selectedRuntime"
-             style="min-width: 50px;">
+             ng-model="selectedRuntime">
     <md-option class="selector-option" ng-value="runtime" ng-repeat="runtime in runtimes">{{runtime.label}}</md-option>
   </md-select>
-
-<md-dialog aria-label="List dialog">
-  <md-dialog-content>
-    <md-list>
-      <md-list-item ng-repeat="item in items">
-        <p>Number {{item}}</p>
-      </md-list-item>
-    </md-list>
-  </md-dialog-content>
-  <md-dialog-actions>
-    <md-button ng-click="closeDialog()" class="md-primary">Close Dialog</md-button>
-  </md-dialog-actions>
-</md-dialog>
-
 </div>
