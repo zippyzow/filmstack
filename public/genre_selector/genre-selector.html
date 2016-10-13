@@ -1,7 +1,0 @@
-<md-grid-list md-cols="4" md-gutter="5px" md-row-height="35px">
-  <md-grid-tile ng-repeat="genre in genres">
-    <md-checkbox ng-model="genre.selected" aria-label="genre.label" ng-change="updateSelectedGenres()">
-      {{ genre.label === 'Documentary' ? 'Docum...' : genre.label }}
-    </md-checkbox>
-  </md-grid-tile>
-</md-grid-list>

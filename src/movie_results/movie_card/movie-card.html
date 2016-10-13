@@ -1,0 +1,24 @@
+<md-card class="card">
+  <md-card-title>
+    <md-card-title-text>
+      <span class="movie-title md-headline">{{ movie.title }}</span>
+      <md-chips class="genre-chips" readonly="true" ng-model="movie.genre"></md-chips>
+      <div>
+        <span class="md-caption"><b>Year:</b> {{ movie.year }}</span>
+        <br>
+        <span class="md-caption"><b>Runtime:</b> {{ movie.runtime }} mins</span>
+        <br>
+        <span class="md-caption"><b>Director:</b> {{ movie.director }}</span>
+        <br>
+        <span class="md-caption"><b>Cast:</b> {{ movie.cast }}</span>
+        <br>
+        <span class="md-caption"><b>Plot:</b> {{ movie.plot | limitTo: 100 }}{{movie.plot.length > 100   ? '...' : '' }}</span>
+      </div>
+    </md-card-title-text>
+    <md-card-title-media class="img-container">
+      <div class="md-media-md card-media">
+        <img class="poster" ng-src="{{ getProxyUrl(movie.poster) }}"/>
+      </div>
+    </md-card-title-media>
+  </md-card-title>
+</md-card>

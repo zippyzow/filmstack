@@ -1,0 +1,19 @@
+.selectors-container {
+  color: #b8b8b8;
+  font: 100% "Roboto", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center; }
+
+.selector {
+  font: 100% "Roboto", sans-serif;
+  display: inline-block;
+  text-transform: lowercase;
+  border-bottom: 2px dashed white; }
+
+.selector-option {
+  font: 100% "Roboto", sans-serif; }
+
+.md-select-value {
+  color: #ffffff !important;
+  font-weight: 400; }

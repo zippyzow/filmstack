@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAe;EACb,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,IAAI;;AAGd,WAAY;EACV,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;;AAGb,mBAAoB;EAClB,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,IAAI",
+"sources": ["movie-results.scss"],
+"names": [],
+"file": "movie-results.css"
+}

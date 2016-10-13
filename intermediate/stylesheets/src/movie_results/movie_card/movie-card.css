@@ -1,0 +1,24 @@
+.card {
+  height: 100%;
+  margin: 0;
+  font: 100% "Roboto", sans-serif; }
+
+.movie-title {
+  font-size: 20px; }
+
+.img-container {
+  padding: 10px 10px; }
+
+.poster {
+  vertical-align: middle; }
+
+.genre-chips md-chip {
+  height: 16px !important;
+  line-height: 16px !important;
+  font-size: 12px;
+  margin: 0 4px 0 0 !important; }
+
+.genre-chips md-chips-wrap {
+  padding: 0 !important;
+  box-shadow: none !important;
+  margin: 3px 0; }

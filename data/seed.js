@@ -11,9 +11,12 @@ var execSync = require('child_process').execSync;
 
 var inputPath = "../../../omdbMovies.txt";
 
+//count the lines in the file using bash
+//TODO: figure out better method to to know when stream reader is finished
 var numLines = parseInt(execSync('wc -l ' + inputPath).toString());
 console.log(numLines);
 
+// initialize movie collection into MongoDB
 mongoose.connect('mongodb://localhost/peewee');
 mongoose.connection.on('error', console.error.bind(console, 'MongoDb connection error: '));
 var moviesCollection = mongoose.connection.collection('movies');
@@ -28,12 +31,10 @@ var rl = readline.createInterface({
   terminal: false
 });
 
-//output interface
-var fd = fs.openSync('omdb-data.json', 'w');
-
 var numMoviesAdded = 0;
 var counter = 0;
 var headers;
+
 //reading file line by line (event loop)
 rl.on('line', function(line) {
   //writing movie json
